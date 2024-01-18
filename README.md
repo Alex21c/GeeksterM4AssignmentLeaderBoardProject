@@ -1,4 +1,4 @@
-# Assignmnent, Emoji Project (Geekster MERN Stack Module 4)
+# Assignmnent, LeaderBoard Project (Geekster MERN Stack Module 4)
 ![](thumbnail.png)
 ![](mvcDiagram.png)
 
