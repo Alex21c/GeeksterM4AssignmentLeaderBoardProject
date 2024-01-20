@@ -13,28 +13,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fontAwesomeProIcons/css/all.css">    
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="tailwind.css">
   
 </head>
-<body>
-  <h1><span class="projectName">LeaderBoard Project</span> <a href="https://www.geekster.in/full-stack-web-development-program">(Geekster MERN Stack Module #4)</a></h1>
+<body class="bg-slate-500 mt-5 mb-20">
+  <h1 id='topHeading' class="text-center  text-zinc-50"><span class="font-semibold text-5xl" style="font-variant: small-caps;">LeaderBoard Project</span> <a href="https://www.geekster.in/full-stack-web-development-program" class="text-2xl">(<span class="underline">Geekster MERN Stack Module #4</span>)</a></h1>
 
-  <form action="#">
-    <div >
-      <select id="playerAvatar"></select>
-    </div>
-    <div class="wapperInputs">
-      <input type="text" placeholder="firstName" id="firstName" required>
-      <input type="text" placeholder="lastName" id="lastName">
-      <input type="number" placeholder="score" id="score" min="0" max="100" required>
-      <select id="playerCountry"></select>
-      <input type="submit" value="Add Player">
-    </div>
+  <form  id='inputForm' action="#" class="addPlayer flex flex-row justify-center bg-slate-500 gap-3 mt-5 mb-3">
+
     
   </form>
+  
+  <ul id="leaderBoardPlayersList" class="flex flex-col items-center"></ul>
+  <a href="#topHeading" id='backToTop' class="displayNone flex flex-row   w-56 m-auto mt-10 p-2 pl-5 gap-5 justify-center  items-center transition-all  text-zinc-50 bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 focus:outline-none focus:ring focus:ring-emerald-500  rounded-md cursor-pointer font-semibold text-2xl"><i class="fa-regular fa-arrow-up"></i><span>Back To Top</span></a>
+  
+  <script>
+    // also for handling visibilty of back to top
+    document.addEventListener('DOMContentLoaded', function () {
+      window.addEventListener('scroll',function(){         
+                 
+        let backToTop = document.getElementById("backToTop");          
+        // console.log(primaryNav);
+        if(window.scrollY >=100){          
+          backToTop.classList.remove('displayNone');
+        }else{
+          backToTop.classList.add('displayNone');          
+        }
+                
+      });
+    });
 
-  <ul id="leaderBoardPlayersList"></ul>
 
+
+    
+  </script>
  <!-- <img id="imgSortingAnimation" src="Images/heapSort.gif" alt="sorting animation">
  
  <button id="test">
@@ -49,8 +61,8 @@
   <script src="dbLeaderBoard.js"> </script>
   <script src="dbEmojis.js"> </script>
   <script src="dbCountries.js"> </script>
-  <script src="Model.js"> </script>
   <script src="View.js"> </script>
+  <script src="Model.js"> </script>
   <script src="Controller.js"> </script>
   <script src="index.js"> </script>
 

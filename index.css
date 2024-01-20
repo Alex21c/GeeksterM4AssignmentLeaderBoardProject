@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-white: #FFFFFF;
 }
@@ -6,7 +10,6 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  
 }
 
 .displayNone {
@@ -16,60 +19,72 @@
 html {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
+
 body{
-  background-color: lightgray;
-  color: darkslategray;
-  font-size: 1rem;
-}
-span.projectName{
-  font-variant:small-caps;
-  
-}
-h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  padding: .2rem;
-  /* background-color: yellow; */
-}
-h1 a{
+
   font-size: 1rem;
 }
 
-#imgSortingAnimation{
-  border-radius: .5rem;
-  width: 10rem;
 
+@media screen and (max-width:1362px){
+  ul#leaderBoardPlayersList li{
+    width:95%;
+  }
 }
-form{
-  display: flex;
-  gap:1rem;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width:1176px){
+  ul#leaderBoardPlayersList li{
+    width:98%;
+  }
+  div.wrapperFlagAndCountryName,
+  div.wrapperPlusAndMinus5{
+    flex-direction: column;
+  }
+  ul#leaderBoardPlayersList li{
+    gap:4rem;
+  }
+}
+@media screen and (max-width:932px){
+  h1{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:890px){
+  ul#leaderBoardPlayersList li{
+    gap:2rem;
+  }
 }
 
-select#playerAvatar{
-  padding: 1rem;
-  font-size: 9rem;
-  border-radius: .5rem;
+@media screen and (max-width:750px){
+  form.addPlayer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width:720px){
+  ul#leaderBoardPlayersList li{
+    flex-direction: column;
+    gap:1rem;
+    align-items: center;
+  }
+  div.wrapperFlagAndCountryName,
+   div.wrapperPlusAndMinus5{
+    flex-direction: row;
+  }
+
+  div.wrapperPlayerNameAndTimeStamp{
+    align-items: center;
+  }
+
+  .avatar{
+    font-size: 10rem;
+  }
 }
 
-form input,
-select#playerCountry{
-  padding: .5rem;
-  font-size: 1rem;
-}
-
-form .wapperInputs{
-  display: flex;
-  flex-direction: column;
-  gap:0rem;
-}
-
-img.flag{
-  width: 2rem;
-  
-
+@media screen and (max-width:476px){
+  div.wrapperInputs{
+    width: 95%;
+  }
 }
