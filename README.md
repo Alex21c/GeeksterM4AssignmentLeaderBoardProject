@@ -2,6 +2,18 @@
 ![](thumbnail.png)
 ![](mvcDiagram.png)
 
+# Tech. Stack Used:
++ [MVC Framework](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
++ [HTML5](https://en.wikipedia.org/wiki/HTML5)
++ [CSS3](https://en.wikipedia.org/wiki/CSS)
++ [Tailwind CSS](https://tailwindcss.com/)
++ [JavaScript ES6](https://en.wikipedia.org/wiki/JavaScript)
++ [Font Awesome](https://fontawesome.com/icons)
++ [Google Fonts](https://fonts.google.com/)
++ [Diagrams.net](https://www.drawio.com/)
++ [Git](https://en.wikipedia.org/wiki/Git)
++ [GitHub](https://github.com/)
++ [VS Code](https://code.visualstudio.com/)
 
 # Hosted Version of the Project:
 [Geekster M4 Assignment&mdash;LeaderBoard Project](https://alex21c.github.io/GeeksterM4AssignmentLeaderBoardProject/)
