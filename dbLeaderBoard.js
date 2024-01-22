@@ -3,10 +3,11 @@ let dbLeaderBoard = [
   // {
   //   firstName: 'Abhishek',
   //   lastName : 'kumar',
-  //   score: 72,
+  //   score: 70,
   //   country: 'India',
   //   avatar: '🧑‍🎨',
-  //   timeStamp: 'mlcToDoTimeStamp'
+  //   timeStamp: 'mlcToDoTimeStamp',
+  //   id: 1007,
   // },
   // {
   //   firstName: 'Alex21C',
@@ -14,7 +15,9 @@ let dbLeaderBoard = [
   //   score: 85,
   //   country: 'Spain',
   //   avatar: '🦚',
-  //   timeStamp: 'mlcToDoTimeStamp'
+  //   timeStamp: 'mlcToDoTimeStamp',
+  //   id:1008,
+
   // },
   // {
   //   firstName: 'Cassendra',

@@ -1,7 +1,7 @@
 'use strict';
 class View{
   constructor(countriesDb, dbEmojis, dbLeaderBoard){
-    // Setting data
+    // Setting data    
       this.css ={
         // plusMinusFive: 'rounded-full p-2 pl-4 pr-4 text-slate-50 bg-slate-500 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300',
         plusMinusFive: 'transition-all rounded-full  bg-gray-300 hover:bg-gray-400 active:bg-gray-500 focus:outline-none focus:ring focus:ring-gray-300 font-semibold w-14 h-14',
@@ -26,6 +26,11 @@ class View{
       this.generateAvatarSelectTag();
       this.generateLeaderboardPlayersList();
 
+    // animation image
+      this.animationImg = document.createElement('img');
+      
+      
+
 
       
     
@@ -33,6 +38,12 @@ class View{
 
     // console.log(this.computeTodayDate());
 
+  }
+
+  showSortingAnimation(){
+    this.leaderBoardPlayersList.innerHTML = '';
+    this.animationImg.setAttribute('src','Images/heapSort.gif');
+    this.leaderBoardPlayersList.append(this.animationImg);
   }
 
   generateInputFormData(){
@@ -79,11 +90,11 @@ class View{
           let country = player.country;
           let score = player.score;
           let avatar = player.avatar;
-          let primaryKey = player.id;
+          let playerId = player.id;
 //  class='bg-slate-500         
         // generating inner tags
           let li = document.createElement('li');    
-          li.setAttribute('primaryKey', primaryKey)      
+          // li.setAttribute('primaryKey', primaryKey)      
           if(playerRank === 1){
             this.css.liBgColor = 'bg-amber-500 border-b-2';
           }else if(playerRank === 2){            
@@ -109,11 +120,11 @@ class View{
 
         <span class='text-4xl'>${score}</span>
         <div class='wrapperPlusAndMinus5 flex flex-row gap-1'>
-          <button class='${this.css.plusMinusFive} text-green-700 '>+5</button> 
-          <button class='${this.css.plusMinusFive} text-red-700'>-5</button> 
+          <button playerId='${playerId}' name='btnPlusFive' class='${this.css.plusMinusFive} text-green-700 '>+5</button> 
+          <button playerId='${playerId}' name='btnMinusFive' class='${this.css.plusMinusFive} text-red-700'>-5</button> 
         </div>
                
-        <button class="fa-duotone fa-trash ${this.css.deleteBin}"></button> 
+        <button playerId='${playerId}' name='btnDeletePlayer' class="fa-duotone fa-trash ${this.css.deleteBin}"></button> 
 `;
         this.leaderBoardPlayersList.append(li);
 
@@ -123,13 +134,10 @@ class View{
         ++playerRank;
       });
 
-      // Attaching click event listener to ul
-      setTimeout(()=>{
-        this.leaderBoardPlayersList.addEventListener('click', (event)=>{
-          console.log('clicked', event.target);
-        })
-      },0);
+
   }
+
+
 
   generateAvatarSelectTag(){
     this.playerAvatar.innerHTML = '';
