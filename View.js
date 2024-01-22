@@ -1,6 +1,7 @@
 'use strict';
 class View{
   constructor(countriesDb, dbEmojis, dbLeaderBoard){
+        this.sortingAnimationSpeed=1000;
     // Setting data    
       this.css ={
         // plusMinusFive: 'rounded-full p-2 pl-4 pr-4 text-slate-50 bg-slate-500 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300',
@@ -10,10 +11,10 @@ class View{
         formInputs: 'bg-slate-400 p-2 text-zinc-50 placeholder:text-slate-200  rounded-md focus:outline-none focus:ring focus:ring-emerald-700',
       };    
     // preparing the GUI
-      this.inputForm = document.querySelector('form#inputForm');
-      
+      this.inputForm = document.querySelector('form#inputForm');      
       this.generateInputFormData();
     // rest of the work
+      this.sortingAnimationSpeed=1000;
       this.countriesDb = countriesDb;
       this.dbEmojis = dbEmojis;
       this.dbLeaderBoard = dbLeaderBoard;
@@ -28,23 +29,20 @@ class View{
 
     // animation image
       this.animationImg = document.createElement('img');
-      this.animationImg.setAttribute('src','Images/heapSort.gif');
-      this.animationImg.setAttribute('style', 'animation-iteration-count: infinite;');
       
-
-
       
-    
-
 
     // console.log(this.computeTodayDate());
 
   }
 
   showSortingAnimation(){
-    this.leaderBoardPlayersList.innerHTML = '';    
-    this.animationImg.setAttribute('src','Images/heapSort.gif');    
+    this.leaderBoardPlayersList.innerHTML = '';
+    this.animationImg.setAttribute('src','Images/heapSort.gif');
     this.leaderBoardPlayersList.append(this.animationImg);
+    setTimeout(()=>{
+      this.animationImg.setAttribute('src','');
+    },this.sortingAnimationSpeed);
   }
 
   generateInputFormData(){

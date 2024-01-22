@@ -2,7 +2,6 @@
 class Controller{ 
 
   constructor(view, model){
-    this.sortingAnimationSpeed=1000;
     this.view = view;
     this.model = model;
     this.formElement={
@@ -27,8 +26,8 @@ class Controller{
         setTimeout(
           ()=>{
             this.model.updateScore(playerId, 'plusFive');
-            this.view.generateLeaderboardPlayersList();
-          },this.sortingAnimationSpeed
+            this.view.generateLeaderboardPlayersList();            
+          },this.view.sortingAnimationSpeed
         );
         
       }else if(event.target.attributes.name.value === 'btnMinusFive'){
@@ -37,8 +36,8 @@ class Controller{
         setTimeout(
           ()=>{
             this.model.updateScore(playerId, 'minusFive');
-            this.view.generateLeaderboardPlayersList();
-          },this.sortingAnimationSpeed
+            this.view.generateLeaderboardPlayersList();            
+          },this.view.sortingAnimationSpeed
         );        
         
       }else if(event.target.attributes.name.value === 'btnDeletePlayer'){
