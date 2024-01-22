@@ -28,7 +28,8 @@ class View{
 
     // animation image
       this.animationImg = document.createElement('img');
-      
+      this.animationImg.setAttribute('src','Images/heapSort.gif');
+      this.animationImg.setAttribute('style', 'animation-iteration-count: infinite;');
       
 
 
@@ -41,8 +42,8 @@ class View{
   }
 
   showSortingAnimation(){
-    this.leaderBoardPlayersList.innerHTML = '';
-    this.animationImg.setAttribute('src','Images/heapSort.gif');
+    this.leaderBoardPlayersList.innerHTML = '';    
+    this.animationImg.setAttribute('src','Images/heapSort.gif');    
     this.leaderBoardPlayersList.append(this.animationImg);
   }
 
