@@ -1,0 +1,61 @@
+
+@media screen and (max-width:1362px){
+  ul#leaderBoardPlayersList li{
+    width:95%;
+  }
+}
+@media screen and (max-width:1176px){
+  ul#leaderBoardPlayersList li{
+    width:98%;
+  }
+  div.wrapperFlagAndCountryName,
+  div.wrapperPlusAndMinus5{
+    flex-direction: column;
+  }
+  ul#leaderBoardPlayersList li{
+    gap:4rem;
+  }
+}
+@media screen and (max-width:932px){
+  h1{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:890px){
+  ul#leaderBoardPlayersList li{
+    gap:2rem;
+  }
+}
+
+@media screen and (max-width:750px){
+  form.addPlayer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width:720px){
+  ul#leaderBoardPlayersList li{
+    flex-direction: column;
+    gap:1rem;
+    align-items: center;
+  }
+  div.wrapperFlagAndCountryName,
+   div.wrapperPlusAndMinus5{
+    flex-direction: row;
+  }
+
+  div.wrapperPlayerNameAndTimeStamp{
+    align-items: center;
+  }
+
+  .avatar{
+    font-size: 10rem;
+  }
+}
+
+@media screen and (max-width:476px){
+  div.wrapperInputs{
+    width: 95%;
+  }
+}
